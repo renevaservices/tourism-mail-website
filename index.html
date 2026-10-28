@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tourism Mail — tourism news, travel destinations and industry insights from Africa and beyond.">
+  <title>Tourism Mail | African Travel & Tourism News</title>
+  <style>
+    :root {
+      --navy: #102b46;
+      --gold: #d9a441;
+      --cream: #f8f6f0;
+      --ink: #202b35;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .topbar {
+      background: var(--navy);
+      color: white;
+      padding: 9px 6%;
+      font-size: 13px;
+    }
+
+    header {
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 30px;
+      font-weight: bold;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+
+    .logo span { color: #b57b1d; }
+    .tagline { font-size: 12px; letter-spacing: 1px; }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    nav a:hover { color: #b57b1d; }
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(9,31,48,.88), rgba(9,31,48,.18)),
+        url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=85")
+        center 45% / cover;
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      padding: 55px 8%;
+      color: white;
+    }
+
+    .hero-content { max-width: 620px; }
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.1;
+      margin: 14px 0;
+    }
+
+    .hero p { font-size: 17px; max-width: 530px; }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: #172b3c;
+      padding: 12px 20px;
+      border-radius: 3px;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    section { padding: 54px 7%; }
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: 30px;
+      color: var(--navy);
+      margin: 0;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .news-card {
+      border: 1px solid #e5e5e5;
+      background: white;
+    }
+
+    .news-card img {
+      display: block;
+      width: 100%;
+      height: 205px;
+      object-fit: cover;
+    }
+
+    .card-body { padding: 20px; }
+    .category {
+      color: #996715;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+
+    h3 {
+      font-family: Georgia, serif;
+      color: var(--navy);
+      font-size: 21px;
+      line-height: 1.3;
+      margin: 8px 0;
+    }
+
+    .card-body p { font-size: 14px; color: #59636b; }
+    .read-more { color: #875c12; font-weight: bold; font-size: 13px; }
+
+    .shop {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .shop-inner { max-width: 760px; margin: auto; }
+    .shop p { color: #59636b; }
+
+    .about {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .about h2 { color: white; }
+    .about p { max-width: 760px; margin: 16px auto; }
+
+    footer {
+      padding: 28px 7%;
+      background: #091c2d;
+      color: #e5e9ed;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .notice { font-size: 12px; opacity: .8; }
+
+    @media (max-width: 760px) {
+      header { align-items: flex-start; }
+      nav { gap: 13px; }
+      .news-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 390px; padding: 42px 7%; }
+      section { padding: 40px 6%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    TOURISM • TRAVEL • DESTINATIONS • INDUSTRY NEWS
+  </div>
+
+  <header>
+    <div>
+      <a class="logo" href="#home">TOURISM <span>MAIL</span></a>
+      <div class="tagline">YOUR WINDOW TO AFRICAN TOURISM</div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#news">Latest News</a>
+      <a href="#magazine">Magazine</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">Discover Africa. Explore the world.</div>
+        <h1>The stories shaping tourism.</h1>
+        <p>
+          Discover destinations, explore travel opportunities and stay
+          informed about the tourism industry across Africa and beyond.
+        </p>
+        <a class="button" href="#news">Explore the latest stories</a>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="section-heading">
+        <h2>Explore Tourism</h2>
+        <span>News • Travel • Business</span>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card">
+          <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80"
+               alt="Wildlife and safari landscape in Africa">
+          <div class="card-body">
+            <div class="category">Destinations</div>
+            <h3>Discover Africa's unforgettable destinations</h3>
+            <p>Explore the landscapes, wildlife and travel experiences that make Africa special.</p>
+            <a class="read-more" href="#about">Discover more →</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80"
+               alt="City skyline and buildings">
+          <div class="card-body">
+            <div class="category">Tourism Business</div>
+            <h3>Opportunities across the tourism industry</h3>
+            <p>A demonstration feature for industry developments, hospitality and business insights.</p>
+            <a class="read-more" href="#about">Discover more →</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
+               alt="Scenic mountain and nature destination">
+          <div class="card-body">
+            <div class="category">Travel Inspiration</div>
+            <h3>Find inspiration for your next journey</h3>
+            <p>Discover beautiful scenery, new places and ideas for future travel adventures.</p>
+            <a class="read-more" href="#about">Discover more →</a>
+          </div>
+        </article>
+      </div>
+      <p class="notice">Demonstration content: sample headlines, not verified news reports.</p>
+    </section>
+
+    <section class="shop" id="magazine">
+      <div class="shop-inner">
+        <div class="eyebrow">The Publication</div>
+        <h2>Read Tourism Mail</h2>
+        <p>
+          Your destination for tourism features, industry insights and
+          travel stories. Explore the publication and find out how to
+          access the latest issue.
+        </p>
+        <a class="button" href="mailto:REPLACE_WITH_KENNEDY_EMAIL?subject=Tourism%20Mail%20Magazine%20Enquiry">
+          Enquire About the Magazine
+        </a>
+        <p class="notice">
+          Sample shop section. Prices, issue details and online checkout
+          will be added once confirmed.
+        </p>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="eyebrow">About Tourism Mail</div>
+      <h2>Connecting people with tourism</h2>
+      <p>
+        Tourism Mail brings readers closer to travel destinations,
+        tourism developments and opportunities across the industry.
+        This demonstration website is a starting point for the publication's
+        digital presence.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>TOURISM MAIL</strong>
+    <p>Tourism news and travel inspiration.</p>
+    <p class="notice">Website concept prepared for review. Publication details to be confirmed.</p>
+    <p>© <span id="year"></span> Tourism Mail</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
